@@ -54,25 +54,28 @@ main{
   border-radius: 30px 30px 0 0;
   width: 100%;
   margin-top: -20%;
+  margin-left: 0%;
 
 
 }  
 /* heart et nom de menu */
 #menus__title{
+  width: 90%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 7% 0;
 }  
 
   h1{
     font-family: var(--font-Shrikhand);
     font-size: 30px;
-    padding-left: 5%;
+    padding-left: 7%;
   }  
 
   /* heart||||||||||||||||||||||||||||||||||||||||||||| */
   .parent-heart{
-    margin-left: 17%;
+    /* margin-left: 17%; */
 
   }  
 
@@ -166,11 +169,11 @@ main{
   }
 
      .menus__text{
-      
-       line-height: 30px;
+      width: 75%;
+      line-height: 180%;
       padding: 10px;
-      overflow: hidden;
-      white-space: nowrap;
+      overflow: auto;
+      white-space:nowrap;
       text-overflow: ellipsis;
      }
 
@@ -266,7 +269,8 @@ main{
 .entree
 {
   text-align: center;
-  animation: entree 3s ease-in-out 500ms ;
+  animation: entree 3s ease-in-out 500ms forwards;
+  opacity: 0;
 }
     @keyframes entree {
       0%{
@@ -282,7 +286,8 @@ main{
 .plats
 {
   text-align: center;
-  animation: plats 3s ease-in-out 1000ms;
+  animation: plats 3s ease-in-out 1000ms forwards;
+  opacity: 0;
 }
 
     @keyframes plats {
@@ -299,7 +304,8 @@ main{
 .desserts
 {
   text-align: center;
-  animation: desserts 3s ease-in-out 1500ms;
+  animation: desserts 3s ease-in-out 1500ms forwards;
+  opacity: 0;
 }
 
     @keyframes desserts {
@@ -334,6 +340,7 @@ button
 
         background-color:rgb(226, 126, 201);
         box-shadow: 3px 3px 10px rgb(7, 7, 7), inset  -5px -20px 30px  #9356dc;
+        transition: all .7s;
       }
 
 /* footer ------------------------------*/
@@ -380,17 +387,10 @@ footer
 
 
 
-
-
-
-
-
-
-
 /* tablette---------------------------------------------------------------------------------- */
 /* tablette---------------------------------------------------------------------------------- */
 
-@media all and (min-width:768px ) {
+@media all and  (min-width: 768px) {
 
 /* header */
 #logo {
@@ -403,10 +403,23 @@ footer
   height: 500px;
 }
 
+/* main ...............................................*/    
+main{
+  background-color: rgb(238, 237, 229);
+  border-radius: 30px 30px 0 0;
+  width: 100%;
+  margin-top: -20%;
+
+}  
+
 /* heart et nom de menu */
 
 #menus__title {
-  justify-content: center;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7% 0;
 }
 
 /* grand-container-menu */
@@ -415,58 +428,79 @@ footer
   margin: auto;
 }
 
-
-}
-
-
-
-
-
-
-
-/* ordinateur------------------------------------------------------------------------------- */
-/* ordinateur------------------------------------------------------------------------------- */
-
-@media all and (min-width:1024px) {
-/* photo............ */
-#img-restau {
-  width: 100%;
-  height: 800px;
-}
-
-
-/* heart et nom de menu */
-
-#menus__title h1 {
-  font-size: 32px;
-}
-
-#menus__title i {
-  font-size: 25px;
-}
-
-
-/* grand-container-menu */
-.trois-block {
-   
-      width: 45%;
-      margin-bottom: 15px;
-    }
-
-
 /* button */
 button {
   width: 30%;
   font-size: 20px;
-  margin: 10% 35% 10% 35% ;
+ 
+  
 }
 
 
 
 
-
-
 }
+
+/* ordinateur------------------------------------------------------------------------------- */
+/* ordinateur------------------------------------------------------------------------------- */
+
+@media all and (min-width: 1024px) {
+  /* photo............ */
+  #img-restau {
+    width: 100%;
+    height: 800px;
+  }
+  /* main ...............................................*/    
+  main{
+    background-color: rgb(238, 237, 229);
+    border-radius: 30px 30px 0 0;
+    width: 100%;
+    margin-top: -20%;
+    
+
+  }  
+  
+  /* heart et nom de menu */
+  
+  #menus__title h1 {
+    font-size: 32px;
+  }
+  
+  #menus__title i {
+    font-size: 25px;
+  }
+  
+  
+  /* grand-container-menu */
+  .trois-block {
+     
+        width: 45%;
+        margin-bottom: 15px;
+      }
+  
+  
+  /* button */
+  button {
+    width: 30%;
+    font-size: 20px;
+    margin: 10% 35% 10% 35%;
+    
+  }
+  
+  
+  
+  
+  
+  
+  }
+  
+
+
+
+
+
+
+
 
 
 
