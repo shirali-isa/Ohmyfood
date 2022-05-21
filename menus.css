@@ -159,7 +159,7 @@ main{
     width: 90%;
     display: flex;
     overflow: hidden;
-    animation:card 1s linear 3s forwards ;
+    animation:card 1s linear 1s forwards ;
    
   }
 
