@@ -159,9 +159,43 @@ main{
     width: 90%;
     display: flex;
     overflow: hidden;
-
-
+    animation:card 1s linear 3s forwards ;
+   
   }
+
+    @keyframes card{
+       
+      0%{
+        transform: translateY(0) ;
+        opacity: .9;
+      }
+       
+
+      25%{
+        transform: translateY(-2%) ;
+        opacity: .7;
+      }
+
+      50%{
+        transform: translateY(-4%);
+        opacity: .8;
+
+      }
+
+
+      75%{
+        transform: translateY(-6%);
+        opacity: .9;
+
+      }
+
+      100%{
+        transform: translateY(-8%);
+        opacity: 1;
+      }
+
+
+    }
 
      .menus__text{
       width: 75%;
@@ -266,10 +300,12 @@ main{
   text-align: center;
   animation: entree 3s ease-in-out 500ms forwards;
   opacity: 0;
+  transition: all ;
 }
     @keyframes entree {
       0%{
         opacity: 0;
+
       }
 
       100%{
